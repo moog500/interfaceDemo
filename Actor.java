@@ -1,4 +1,4 @@
-public abstract class Actor implements Comparable{
+public abstract class Actor implements Comparable<Actor>{
     private String name;
     private int strength,agility,intelligence;
     private int health;
@@ -21,7 +21,7 @@ public abstract class Actor implements Comparable{
     }
 
     public String toString(){
-	return name + " hp: "+health+ " " + getResourceName() + ": " + getResource() +" " + strength+"S/"+agility+"A/"+intelligence+"I";
+	return name + " "+health+ "H/" + getResourceName() + ": " + getResource() +" " + strength+"S/"+agility+"A/"+intelligence+"I";
     }
 
     
@@ -40,7 +40,9 @@ public abstract class Actor implements Comparable{
     public abstract String specialAttack();
     public abstract int getResource();
     public abstract String getResourceName();
-    public abstract int compareTo(Object other);
+    public int compareTo(Actor other){
+	return name.compareTo(other.name);
+    }
  
     
 }
