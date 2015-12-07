@@ -41,5 +41,6 @@ public abstract class Actor implements Comparable{
     public abstract int getResource();
     public abstract String getResourceName();
     public abstract int compareTo(Object other);
+ 
     
 }

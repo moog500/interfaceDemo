@@ -36,9 +36,10 @@ public class Demo3{
     public static void main(String[]args){
 	Barbarian[]people;
 
-	people = new Barbarian[15];
+	people = new Barbarian[7];
 	for(int i = 0; i < people.length; i++){
-	    people[i] = new Barbarian(""+(char)('A'+(int)(Math.random()*26))+"onan");
+	    people[i] = new Barbarian(
+		      ""+(char)('A'+(int)(Math.random()*26))+"onan");
 	}
 
 	System.out.println(Arrays.toString(people));

@@ -1,9 +1,12 @@
 import java.util.Arrays;
 public class Demo2{
     public static void main(String[]args){
-	//lets look at how we can sort things with the built in sort:
-	String[] words = { "fish","garbage","onions","feet","sewage","apes"};
 
+	//lets look at how we can sort things with the built in sort:
+	String[] words = { "fish","garbage","onions","feet","Sewage","apes"};
+	Object [] stuff = new Object[2];
+	stuff[0]= new Object();
+	stuff[1]= new Object();
 	//To use the built in sort we need to import java.util.Arrays
 
 	//This gives us many useful array related methods:
@@ -19,6 +22,7 @@ public class Demo2{
 
 	System.out.println( Arrays.toString(words) );//print it!
 	Arrays.sort(words); //and sort it.
+	Arrays.sort(stuff);
 	System.out.println( Arrays.toString(words) );//print it again!
 
 

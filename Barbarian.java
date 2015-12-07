@@ -25,7 +25,7 @@ public class Barbarian extends Actor{
     public String getResourceName(){return "Rage";}
 
     public int compareTo(Object other){
-	return 0;//all Barbarians are the same.
+	return 0;
     }
 
 }
