@@ -12,38 +12,30 @@ public class Demo3{
 
     //b. Implement a compareTo method having the signature:
     //int compareTo(T other)    where T is the type parameter.
-
-
-    //1. Copy your Adventurer + Warrior classes into this directory. 
-
-    //2. Try to compile the code below before you make Warrior Comparable.
-
-    //3. Modify the Warrior so that it is comparable as per directions above.
-    //dont forget:
-    //   implements Comparable<Warrior>
-    //   public int compareTo(Warrior other)
-
-    //4 about compareTo():
-    //How can we compare warriors? What determines less than or greater?
-    //We must pick one measure of a warriors greatness.
-    //To make it simple, More HP means the warrior is greater.
-
-    //5. Test to see if the sorting now works with Warriors.
-    //How do you know it worked? 
-    //How can you verify this?
-    //Your toString in Warrior doesn't help us, what can you do?
+    
+    //1. I have given you an actor with the comparable interface added.
+    //Modify the Actor as per the directiosn in the actor class. 
+    //Then run this demo to see if your changes worked.
 
     public static void main(String[]args){
 	Barbarian[]people;
 
-	people = new Barbarian[7];
-	for(int i = 0; i < people.length; i++){
-	    people[i] = new Barbarian(
-		      ""+(char)('A'+(int)(Math.random()*26))+"onan");
-	}
+	people = new Barbarian[4];
 
+	//make 4 random barbarians to use sort on:
+	for(int i = 0; i < people.length; i++){
+	    String letter = ""+(char)('A'+(int)(Math.random()*26));
+	    people[i] = new Barbarian(letter + "onan",
+				      (int)(Math.random()*10)+10,
+				      (int)(Math.random()*10)+5,
+				      (int)(Math.random()*5)+5,
+				      (int)(Math.random()*20)+20);
+	}
+	//print them
 	System.out.println(Arrays.toString(people));
+	//sort using the compareTo you wrote
 	Arrays.sort(people);
+	//print them again
 	System.out.println(Arrays.toString(people));
 
 
