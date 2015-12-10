@@ -9,7 +9,8 @@ public abstract class Actor implements Comparable<Actor>{
 
     //this method will compare actors by name
     public int compareTo(Actor other){
-	return 0;
+        //return name.compareTo(other.getName()); 
+
 	//Try 0-3 and compile and run Demo3 after each one. 
 	//If it works comment out the return statement
 	//then do the next.
@@ -18,7 +19,7 @@ public abstract class Actor implements Comparable<Actor>{
 	//
 	//1. Modify compareTo so that sorting your Actors will 
 	//   sort lowest HP to Highest HP. Then test the driver
-	//
+	//return health - other.health;
 	//2. Modify compareTo so that sorting your Actors will 
 	//   sort lowest strength to highest strength
 	//
@@ -28,7 +29,10 @@ public abstract class Actor implements Comparable<Actor>{
 	//   "primary stat" (str for barbs int for wiz etc)
 	//   come up with a plan, write a list of modifications
 	//   you need to make, and where you want the methods to go.
-
+	//
+	//  First, you need to identify the primary stat, it should be a 
+	// static string for each class, which references a variable 
+	// and then compare those
     }
 
 
